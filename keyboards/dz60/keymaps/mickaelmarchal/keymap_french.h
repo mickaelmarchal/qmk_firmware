@@ -55,7 +55,7 @@
 
 
 // Row 1
-#define FW_SUP2 KC_GRV  // ²
+#define FW_SUP2 KC_NUBS // ²
 #define FW_AMPR KC_1    // &
 #define FW_EACU KC_2    // é
 #define FW_DQUO KC_3    // "
@@ -69,7 +69,7 @@
 #define FW_RPRN KC_MINS // )
 #define FW_EQL  KC_EQL  // =
 
-#define FM_AT   KC_GRV  // @
+#define FM_AT   KC_NUBS // @
 #define FM_AMPR KC_1    // &
 #define FM_EACU KC_2    // é
 #define FM_DQUO KC_3    // "
@@ -141,7 +141,7 @@
 
 
 // Row 4
-#define FW_LABK KC_NUBS // <
+#define FW_LABK KC_GRV  // <
 #define FW_W    KC_Z    // W
 #define FW_X    KC_X    // X
 #define FW_C    KC_C    // C
@@ -153,7 +153,7 @@
 #define FW_COLN KC_DOT  // :
 #define FW_EXLM KC_SLSH // !
 
-#define FM_LABK KC_NUBS // <
+#define FM_LABK KC_GRV // <
 #define FM_W    KC_Z    // W
 #define FM_X    KC_X    // X
 #define FM_C    KC_C    // C
