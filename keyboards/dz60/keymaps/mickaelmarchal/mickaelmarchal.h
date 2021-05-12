@@ -11,7 +11,8 @@
 enum keyboard_layers {
   _BASE_WIN,
   _BASE_MAC,
-  _FN,
+  _FN_WIN,
+  _FN_MAC,
 };
 
 
@@ -57,6 +58,8 @@ enum userspace_custom_keycodes {
     MW_COMM,    MM_COMM,
     MW_DOT,     MM_DOT,
     MW_GRV,     MM_GRV,
+
+    MW_ALTAB,   MM_ALTAB,
 
     M_KVM1,
     M_KVM2,
