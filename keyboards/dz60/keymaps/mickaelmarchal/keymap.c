@@ -32,7 +32,7 @@ const uint8_t key_translations[][2][2] = {
   [GR(MM_5)] =      {{FM_LPRN, MOD_LSFT},      {FM_UGRV, MOD_LSFT}},
 
   // 6 ^
-  [GR(MW_6)] =      {{FW_UNDS, MOD_LSFT},      {FW_CIRC, MOD_NONE}},
+  [GR(MW_6)] =      {{FW_MINS, MOD_LSFT},      {FW_CIRC, MOD_NONE}},
   [GR(MM_6)] =      {{FM_SECT, MOD_LSFT},      {FM_CIRC, MOD_NONE}},
 
   // 7 &
@@ -115,8 +115,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * │→FN          │a      │u      │i      │e      │d      │g      │t      │s      │r      │n      │'      │ENTER            │
  * ├──────────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴───────┴─┬───────┬───────┤
  * │LSHIFT    │é è    │z      │x      │c      │v      │k      │h      │m      │,      │.      │RSHIFT      │UP     │` ¨    │
- * ├──────────┼───────┴──┬────┴─────┬─┴───────┴───────┼───────┴──┬────┴───────┴────┬──┴─────┬──┴───┬───────┼───────┼───────┤
- * │LCTRL     │LALT      │LCMD/WIN  │SPACE            │→FN/SPC   │SPACE            │RCMD/WIN│RALT  │LEFT   │DOWN   │RIGHT  │
+ * ├──────────┼───────┴──┬────┴─────┬─┴───────┴───────┼───────┴──┬────┴───────┴────┬──┴─────┬─┴────┬───────┼───────┼───────┤
+ * │WIN/LCTRL │LALT      │LCTRL/LCMD│SPACE            │→FN/SPC   │SPACE            │RCMD/WIN│RALT  │LEFT   │DOWN   │RIGHT  │
  * └──────────┴──────────┴──────────┴─────────────────┴──────────┴─────────────────┴────────┴──────┴───────┴───────┴───────┘
  */
 [_BASE_WIN] = LAYOUT_60_mickaelmarchal(
@@ -124,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_TAB,		FW_B, 		FW_P, 		FW_O, 		FW_F, 		FW_W, 		FW_J, 		FW_Q, 		FW_L, 		FW_Y,		MW_SCLN,	MW_LCBR,   	MW_RCBR,    KC_BSPC,
 	MO(_FN),    FW_A, 		FW_U, 		FW_I, 		FW_E, 		FW_D, 		FW_G, 		FW_T, 		FW_S,		FW_R, 		FW_N, 		MW_QUOT, 	KC_ENT,
 	KC_LSFT,  	MW_EACU,   	FW_Z,   	FW_X,   	FW_C,   	FW_V,   	FW_K,   	FW_H,   	FW_M,   	MW_COMM,	MW_DOT, 	KC_RSFT, 	KC_UP,		MW_GRV,
-	KC_LCTL, 	KC_LALT, 	KC_LGUI,	KC_SPC,		LT(_FN, KC_SPC),    	KC_SPC, 	KC_RGUI,	KC_RALT, 	KC_LEFT,	KC_DOWN,	KC_RGHT
+	KC_LGUI, 	KC_LALT, 	KC_LCTL,	KC_SPC,		LT(_FN, KC_SPC),    	KC_SPC, 	KC_RGUI,	KC_RALT, 	KC_LEFT,	KC_DOWN,	KC_RGHT
 ),
 [_BASE_MAC] = LAYOUT_60_mickaelmarchal(
 	KC_ESC,		MM_1,	    MM_2,	    MM_3,	    MM_4,	    MM_5,	    MM_6,	    MM_7,	    MM_8,	    MM_9,	    MM_0,	    MM_MINS,	MM_EQL,  	MM_SLSH,    MM_BSLS,
@@ -139,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ┌───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┐
  * │RESET  │F1     │F2     │F3     │F4     │F5     │F6     │F7     │F8     │F9     │F10    │F11    │F12    │KVM1   │KVM2   │
  * ├───────┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───┬───┴───────┤
- * │LCTRL      │RGB    │RGB+   │RBG-   │       │       │       │       │UP     │       │       │       │       |DEL        │
+ * │LCTRL      │RGB    │RGB+   │RGB-   │       │       │       │       │UP     │       │       │       │       |DEL        │
  * ├───────────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴─┬─────┴───────────┤
  * │_______      │LSHIFT │       │       │       │       │       │LEFT   │DOWN   │RIGHT  │       │       │                 │
  * ├──────────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴────┬──┴───────┴─┬───────┬───────┤
